@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Shantell+Sans&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-color: #c5c3c6;
+  --header-font-color: #b0e4db;
+  --header-background-color: #4c5c68;
+  --font-color: #46494b;
+  --border-color: #555;
+  --border-restart-color: #244b5c;
+  --background-restart-color: #588294;
+  --field-hover: #9ea6a9;
+}
+body {
+  font-family: "Varela Round", sans-serif;
+  background-color: var(--background-color);
+  height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--header-font-color);
+  background-color: var(--header-background-color);
+  font-size: 2rem;
+  height: 10%;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+}
+.message {
+  display: flex;
+  justify-content: center;
+  color: var(--font-color);
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  border: 2px solid var(--border-color);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+  width: 454px;
+  height: 454px;
+  background-color: white;
+}
+.data-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  width: 150px;
+  height: 150px;
+  font-size: 100px;
+}
+.data-field:hover {
+  background: var(--field-hover);
+  cursor: pointer;
+}
+.restart {
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 12px;
+  width: 200px;
+  font-size: 1.5rem;
+  border: 2px solid var(--border-restart-color);
+  color: var(--font-color);
+  background-color: var(--background-restart-color);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.restart:hover {
+  transform: scale(1.1);
+}
+.winner {
+  color: lightgreen;
+}
